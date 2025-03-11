@@ -1,72 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointment Booking</title>
+    <title>Naia's Code Snippet</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
             margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 8px;
-        }
-        h2 {
+            font-family: Arial, sans-serif;
             text-align: center;
         }
-        label {
-            font-size: 18px;
-        }
-        input, textarea {
+        .container {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #444;
-            border: 1px solid #666;
-            border-radius: 4px;
-            color: white;
+            max-width: 600px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #f9f9f9;
         }
-        input[type="submit"] {
-            background-color: #007BFF;
-            border: none;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
+        .code-box {
+            background-color: #282c34;
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            font-family: monospace;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Book an Appointment for a Custom PC Build</h2>
-        <form action="https://formspree.io/f/xrbpzzep" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+        <h1>Naia: Type these:</h1>
+        <div class="code-box">
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-            <label for="email">Your Email (for contact):</label>
-            <input type="email" id="email" name="email" required><br><br>
+export default function PinterestClone() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [age, setAge] = useState('');
 
-            <label for="budget">Your Budget for the Computer:</label>
-            <input type="text" id="budget" name="budget" required><br><br>
+    return (
+        <View style={styles.container}>
+            <Image 
+                source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png' }}
+                style={styles.logo}
+            />
+            <Text style={styles.welcomingText}>Welcome to Pinterest</Text>
+            <Text style={styles.findText}>Find new ideas to try</Text>
 
-            <label for="phone">Your Phone Number (for contact):</label>
-            <input type="tel" id="phone" name="phone" value="" required><br><br>
+            <TextInput
+                style={styles.textInput}
+                placeholder="Email"
+                onChangeText={setEmail}
+                value={email}
+            />
 
-            <label for="message">Additional Message (anything specific you would like to know?):</label>
-            <textarea id="message" name="message"></textarea><br><br>
+            <TextInput
+                style={styles.textInput}
+                placeholder="Create a password"
+                secureTextEntry
+                onChangeText={setPassword}
+                value={password}
+            />
 
-            <!-- Submit Button -->
-            <button type="submit">Confirm Appointment</button>
-        </form>
+            <TextInput
+                style={styles.textInput}
+                placeholder="Age"
+                keyboardType="numeric"
+                onChangeText={setAge}
+                value={age}
+            />
+
+            <TouchableOpacity style={styles.continueButton}>
+                <Text style={styles.buttonText}>Continue</Text>
+            </TouchableOpacity>
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff',
+        padding: 20
+    },
+    logo: {
+        width: 100,
+        height: 100,
+        marginBottom: 20
+    },
+    welcomingText: {
+        fontSize: 25,
+        fontWeight: 'bold',
+        marginBottom: 10
+    },
+    findText: {
+        fontSize: 16,
+        color: 'gray',
+        marginBottom: 20
+    },
+    textInput: {
+        width: '100%',
+        height: 50,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        borderRadius: 10,
+        paddingLeft: 10,
+        marginBottom: 15
+    },
+    continueButton: {
+        backgroundColor: '#E60023',
+        padding: 15,
+        borderRadius: 10,
+        width: '100%',
+        alignItems: 'center'
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 18,
+        fontWeight: 'bold'
+    }
+});
+        </div>
     </div>
 </body>
 </html>
