@@ -1,45 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naia's Code Snippet</title>
-    <style>
-        body {
-            display: flex;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .container {
-            width: 100%;
-            max-width: 600px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            background-color: #f9f9f9;
-        }
-        .code-box {
-            background-color: #282c34;
-            color: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: left;
-            white-space: pre-wrap;
-            overflow-x: auto;
-            font-family: monospace;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Naia: Type these:</h1>
-        <div class="code-box">
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
@@ -92,7 +50,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: '#282828',
         padding: 20
     },
     logo: {
@@ -101,20 +59,20 @@ const styles = StyleSheet.create({
         marginBottom: 20
     },
     welcomingText: {
-        fontSize: 25,
+        fontSize: 30,
         fontWeight: 'bold',
+        color: '#fff',
         marginBottom: 10
     },
     findText: {
-        fontSize: 16,
-        color: 'gray',
+        fontSize: 18,
+        color: '#bbb',
         marginBottom: 20
     },
     textInput: {
         width: '100%',
         height: 50,
-        borderColor: '#ccc',
-        borderWidth: 1,
+        backgroundColor: '#fff',
         borderRadius: 10,
         paddingLeft: 10,
         marginBottom: 15
@@ -132,7 +90,3 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     }
 });
-        </div>
-    </div>
-</body>
-</html>
