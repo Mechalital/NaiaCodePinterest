@@ -9,18 +9,33 @@
             font-family: Arial, sans-serif;
             background-color: #f3f4f6;
             text-align: center;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
             padding: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
         }
         .container {
             background: white;
-            max-width: 500px;
-            margin: auto;
-            padding: 20px;
+            max-width: 600px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-align: left;
         }
         label {
@@ -28,31 +43,44 @@
         }
         input {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
         button {
             width: 100%;
             background-color: #28a745;
             color: white;
-            padding: 10px;
+            padding: 12px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
         }
         button:hover {
             background-color: #218838;
         }
+        .footer {
+            margin-top: 20px;
+            padding: 15px;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
-    <h1>Hassle-free Freight Shipping</h1>
-    <p>Compare quotes from high-quality, vetted shipping companies.</p>
+    <div class="header">Freight Shipping Services</div>
 
     <div class="container">
+        <h2>Get Your Freight Quote</h2>
+        <p>Compare quotes from high-quality, vetted shipping companies.</p>
         <form id="quoteForm">
             <div class="form-group">
                 <label for="date">Requested Loading Date</label>
@@ -69,6 +97,8 @@
             <button type="submit">Start Your Quote</button>
         </form>
     </div>
+
+    <div class="footer">&copy; 2025 Freight Quote. All rights reserved.</div>
 
     <script>
         document.getElementById('quoteForm').addEventListener('submit', function(event) {
